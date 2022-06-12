@@ -42,7 +42,7 @@ const quotes = [
     },
     {
         quote: "If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals.",
-        author: "J.K. Rowling,",
+        author: "J.K. Rowling",
     },
     {
         quote: "Don’t walk in front of me… I may not followDon’t walk behind me… I may not leadWalk beside me… just be my friend",
@@ -54,7 +54,7 @@ const quotes = [
     },
     {
         quote: 'Friendship ... is born at the moment when one man says to another "What! You too? I thought that no one but myself . . .',
-        author: "C.S. Lewis,",
+        author: "C.S. Lewis",
     },
     {
         quote: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
@@ -78,19 +78,19 @@ const quotes = [
     },
     {
         quote: "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.",
-        author: "Martin Luther King Jr.,",
+        author: "Martin Luther King Jr.",
     },
     {
         quote: "We accept the love we think we deserve.",
-        author: "Stephen Chbosky,",
+        author: "Stephen Chbosky",
     },
     {
         quote: "Without music, life would be a mistake.",
-        author: "Friedrich Nietzsche,",
+        author: "Friedrich Nietzsche",
     },
     {
         quote: "I am so clever that sometimes I don't understand a single word of what I am saying.",
-        author: "Oscar Wilde,",
+        author: "Oscar Wilde",
     },
     {
         quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
@@ -110,11 +110,11 @@ const quotes = [
     },
     {
         quote: "It is better to be hated for what you are than to be loved for what you are not.",
-        author: "Andre Gide,",
+        author: "Andre Gide",
     },
     {
         quote: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-        author: "H. Jackson Brown Jr.,",
+        author: "H. Jackson Brown Jr.",
     },
     {
         quote: "I never dreamed about success, I worked for it",
@@ -158,10 +158,11 @@ const quotes = [
     },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote a span");
+const author = document.querySelector("#quote > span");
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.maxlength = "40";
+author.innerText = " - " + todaysQuote.author;
