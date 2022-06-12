@@ -31,6 +31,7 @@ h1 {
 }
 
 div#quote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     white-space: nowrap;
     color: white;
     text-align: center;
@@ -40,11 +41,7 @@ div#quote {
     transform: translate(-50%, -50%);
 }
 
-div#quote a {
-    text-decoration: none;
-}
-
-div#quote a span {
+div#quote span {
     width: 1000px;
     height: auto;
     overflow:hidden;
@@ -61,7 +58,7 @@ div#todo-box {
     transform: translate(-50%, 0%);
 }
 
-input {
+form#todo-form input {
     width: 200px;
     height: 25px;
 }
@@ -79,7 +76,20 @@ ul#todo-list > li {
 }
 
 ul#todo-list > li > button {
-    padding: 10px;
+    padding: 5px;
     background: none;
     border: none;
 }
+
+div#weather span {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    float: right;
+    display: block;
+    margin-right: 10px;
+}
+
+div#weather {
+    text-align: right;
+}
+
